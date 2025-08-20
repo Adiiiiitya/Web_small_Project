@@ -21,7 +21,7 @@ const data = fs.readFileSync('F:\\web+devops+web3\\Web(Week-1)\\Class_practical\
 
 //console.log(data);
 
-const data2 = fs.readFile('F:\\web+devops+web3\\Web(Week-1)\\Class_practical\\a.txt', 'utf8');//tere readFileSync-->It is asynchronously
+const data2 = fs.readFile('F:\\web+devops+web3\\Web(Week-1)\\Class_practical\\a.txt', 'utf8');//tere readFile-->It is asynchronously
 
 //console.log(data2);
 
