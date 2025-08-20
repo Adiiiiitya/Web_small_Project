@@ -10,9 +10,9 @@ const p = new Promise(random)     //in simple words Promice has function which a
 
 
 function callback(){
-    //console.log("Promice is succeded"); 
+    console.log("Promice is succeded"); 
 }
-p.then(callback);     //When ever "resolve" function is completed then "callback" function will work and this is the work of Promice function
+//p.then(callback);     //When ever "resolve" function is completed then "callback" function will work and this is the work of Promice function
 
 
 
@@ -38,4 +38,20 @@ function CallBack(consts){
 }
 
 
-P.then(CallBack);
+//P.then(CallBack);
+
+
+//  ****************** Practise of Promice*****************************
+
+function timeOut(resolve){
+    setTimeout(resolve,3000);
+}
+
+let adi = new Promise(timeOut);
+
+function callback(){
+    console.log("3 sec has done"); 
+}
+adi.then(callback);
+
+
