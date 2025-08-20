@@ -52,6 +52,48 @@ let adi = new Promise(timeOut);
 function callback(){
     console.log("3 sec has done"); 
 }
-adi.then(callback);
+//adi.then(callback);
 
+// *************** Making Promice ***********************
 
+function setTimeoutPromisified(duration){
+    return new Promise(function doing(resolves){
+        //console.log("Hello World")
+        setTimeout(resolves,duration)
+    })
+}
+function callbacks(){
+    console.log("Hi")
+}
+//setTimeoutPromisified(1000).then(callbacks);
+
+// *********** Callback Hell ***************
+// It is nested asyn function
+
+setTimeout(function (){
+    console.log("Hi");
+    setTimeout(function(){
+        console.log("Hello");  
+        setTimeout(function(){
+            console.log("Helle there");
+            
+        },5000)      
+    },3000)
+},1000)
+
+//         OR we can do with promice
+
+function code3(){
+    console.log("Hello there");
+}
+
+function code2(){
+    console.log("Hello");
+    setTimeout(code3,5000);
+}
+
+function code1() {
+    console.log("Hi");
+    setTimeout(code2,3000);
+};
+setTimeout(code1,1000);
