@@ -122,3 +122,18 @@ setTimeoutPromisified(1000).then(function code1(){
 }).then(function code3(){
     console.log("Hello there");
 })
+
+
+// solving same problem by Async waite 
+
+
+async function solution() {
+    await setTimeoutPromisified(1000)
+    console.log("Hi");
+    await setTimeoutPromisified(3000)
+    console.log("Hello");
+    await setTimeoutPromisified(5000)
+    console.log("Hello there");
+}
+
+console.log(solution)
