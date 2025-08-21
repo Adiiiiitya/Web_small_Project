@@ -81,7 +81,7 @@ setTimeout(function (){
     },3000)
 },1000)
 
-//         OR we can do with promice
+//         OR 
 
 function code3(){
     console.log("Hello there");
@@ -97,3 +97,28 @@ function code1() {
     setTimeout(code2,3000);
 };
 setTimeout(code1,1000);
+
+
+// ************callback hell by Promice ******************
+
+setTimeoutPromisified(1000).then(function code1(){
+    console.log("Hi");
+    setTimeoutPromisified(3000).then(function(){
+        console.log("Hello");
+        setTimeoutPromisified(5000).then(function code3(){
+            console.log("Hello there");
+            
+        })
+    })
+})
+
+//      Promice chain
+setTimeoutPromisified(1000).then(function code1(){
+    console.log("Hi");
+    return setTimeoutPromisified(3000)
+}).then(function(){
+    console.log("Hello");
+    return setTimeoutPromisified(5000)
+}).then(function code3(){
+    console.log("Hello there");
+})
