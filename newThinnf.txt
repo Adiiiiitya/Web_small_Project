@@ -1,0 +1,46 @@
+//setInterval-> Call funvtion again & again by the time is given
+ctr=0;
+function Callback(){
+    document.querySelectorAll("h2")[0].innerHTML =ctr;
+    ctr=ctr+1
+}
+//setInterval(Callback,1000);
+
+//*************deletion **************
+function delet(index){
+let elemnt = document.getElementById("todo-"+index)
+elemnt.parentElement.removeChild(elemnt);
+}
+//************ inserting **************
+
+const newDiv = document.createElement("div");
+newDiv.innerHTML="Hello World";
+document.getElementById("todo-1").appendChild(newDiv)
+
+
+
+
+
+
+
+
+
+
+
+
+**************************************************
+HTML part------------>>>>>>>>
+<body>
+    <h1>ToDo List</h1>
+    <div id="todo-1" style="display: flex;">
+        <h2>1.Study javascript</h4>
+        <button onclick="delet(1)">Delete</button>
+    </div>
+    
+    <h2>2.Go to gym</h4>
+    <div>
+        <input type="text">
+        <button>Add ToDo</button>
+    </div>
+<script src="script.js"></script>
+</body>
